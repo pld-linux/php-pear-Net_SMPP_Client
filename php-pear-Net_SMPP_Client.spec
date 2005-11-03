@@ -15,13 +15,18 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	b69e7d4348c03a6a59ef845825ef8749
 URL:		http://pear.php.net/package/Net_SMPP_Client/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:4.1.0
 Requires:	php-pear
+Requires:	php-pear-Net_SMPP >= 0.4.1
+Requires:	php-pear-Net_Socket >= 1.0.0
+Requires:	php-pear-PEAR >= 1:1.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net_SMPP_Client is a package for communicating with SMPP servers, built
-with Net_SMPP. It can be used to send SMS messages, among other things.
+Net_SMPP_Client is a package for communicating with SMPP servers,
+built with Net_SMPP. It can be used to send SMS messages, among other
+things.
 
 Features:
 - PDU stack keeps track of which PDUs have crossed the wire
