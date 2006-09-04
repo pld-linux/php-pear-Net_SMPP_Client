@@ -8,7 +8,7 @@ Summary:	%{_pearname} - SMPP v3.4 client
 Summary(pl):	%{_pearname} - klient protoko³u SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	1.1
+Release:	2
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
