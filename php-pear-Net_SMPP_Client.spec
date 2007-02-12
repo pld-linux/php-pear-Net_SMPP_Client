@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}_Client
 
 Summary:	%{_pearname} - SMPP v3.4 client
-Summary(pl):	%{_pearname} - klient protoko≥u SMPP v3.4
+Summary(pl.UTF-8):   %{_pearname} - klient protoko≈Çu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
 Release:	2
@@ -38,15 +38,15 @@ Features:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Net_SMPP_Client to korzystaj±cy z klasy Net_SMPP pakiet s≥uøacy do
-komunikacji z serwerami SMPP. Moøe byÊ wykorzystany miÍdzy innymi do
-wysy≥ania wiadomo∂ci SMS.
+%description -l pl.UTF-8
+Net_SMPP_Client to korzystajƒÖcy z klasy Net_SMPP pakiet s≈Çu≈ºacy do
+komunikacji z serwerami SMPP. Mo≈ºe byƒá wykorzystany miƒôdzy innymi do
+wysy≈Çania wiadomo≈õci SMS.
 
 Cechy:
-- stos PDU przechowuj±cy informacje o PDU, ktÛre pojawi≥y siÍ na linii
-- przechowuje informacje o stanie po≥±czenia i nie pozwoli na wys≥anie
-  PDU je∂li stan ten jest nieprawid≥owy
+- stos PDU przechowujƒÖcy informacje o PDU, kt√≥re pojawi≈Çy siƒô na linii
+- przechowuje informacje o stanie po≈ÇƒÖczenia i nie pozwoli na wys≈Çanie
+  PDU je≈õli stan ten jest nieprawid≈Çowy
 - wspiera rozszerzenia SMPP
 
 Ta klasa ma w PEAR status: %{_status}.
