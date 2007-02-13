@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}_Client
 
 Summary:	%{_pearname} - SMPP v3.4 client
-Summary(pl.UTF-8):   %{_pearname} - klient protokołu SMPP v3.4
+Summary(pl.UTF-8):	%{_pearname} - klient protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
 Release:	2
