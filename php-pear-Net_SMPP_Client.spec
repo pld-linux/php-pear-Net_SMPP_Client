@@ -8,7 +8,7 @@ Summary:	%{_pearname} - SMPP v3.4 client
 Summary(pl.UTF-8):	%{_pearname} - klient protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	2
+Release:	3
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -21,7 +21,7 @@ Requires:	php-common >= 3:4.1.0
 Requires:	php-pear
 Requires:	php-pear-Net_SMPP >= 0.4.1
 Requires:	php-pear-Net_Socket >= 1.0.0
-Requires:	php-pear-PEAR >= 1:1.3
+Requires:	php-pear-PEAR-core >= 1:1.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
