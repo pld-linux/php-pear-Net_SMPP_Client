@@ -3,12 +3,11 @@
 %define		_subclass	SMPP
 %define		_status		devel
 %define		_pearname	%{_class}_%{_subclass}_Client
-
 Summary:	%{_pearname} - SMPP v3.4 client
 Summary(pl.UTF-8):	%{_pearname} - klient protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	4
+Release:	5
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
