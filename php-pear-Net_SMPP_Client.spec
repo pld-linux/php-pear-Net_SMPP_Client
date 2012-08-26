@@ -1,13 +1,11 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		Net
-%define		_subclass	SMPP
 %define		_status		devel
-%define		_pearname	%{_class}_%{_subclass}_Client
+%define		_pearname	Net_SMPP_Client
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - SMPP v3.4 client
 Summary(pl.UTF-8):	%{_pearname} - klient protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	5
+Release:	6
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,7 +14,7 @@ URL:		http://pear.php.net/package/Net_SMPP_Client/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:4.1.0
+Requires:	php(core) >= 4.1.0
 Requires:	php-pear
 Requires:	php-pear-Net_SMPP >= 0.4.1
 Requires:	php-pear-Net_Socket >= 1.0.0
@@ -69,4 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/Net/SMPP/*.php
