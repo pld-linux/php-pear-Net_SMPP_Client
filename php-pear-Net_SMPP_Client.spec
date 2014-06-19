@@ -1,19 +1,19 @@
-%define		_status		devel
-%define		_pearname	Net_SMPP_Client
+%define		status		devel
+%define		pearname	Net_SMPP_Client
 %include	/usr/lib/rpm/macros.php
-Summary:	%{_pearname} - SMPP v3.4 client
-Summary(pl.UTF-8):	%{_pearname} - klient protokołu SMPP v3.4
-Name:		php-pear-%{_pearname}
-Version:	0.3.2
-Release:	6
+Summary:	%{pearname} - SMPP v3.4 client
+Summary(pl.UTF-8):	%{pearname} - klient protokołu SMPP v3.4
+Name:		php-pear-%{pearname}
+Version:	0.4.1
+Release:	1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	b69e7d4348c03a6a59ef845825ef8749
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	49b3e65036801a8de0e9e0bccb7667d5
 URL:		http://pear.php.net/package/Net_SMPP_Client/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	php(core) >= 4.1.0
 Requires:	php-pear
 Requires:	php-pear-Net_SMPP >= 0.4.1
@@ -33,7 +33,7 @@ Features:
   the state is incorrect.
 - Supports SMPP vendor extensions.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Net_SMPP_Client to korzystający z klasy Net_SMPP pakiet służacy do
@@ -46,25 +46,28 @@ Cechy:
   PDU jeśli stan ten jest nieprawidłowy
 - wspiera rozszerzenia SMPP
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
 
-install -d docs/%{_pearname}
-mv ./%{php_pear_dir}/docs/%{_pearname}/* docs/%{_pearname}
+mv docs/Net_SMPP_Client/docs/examples .
+mv .%{php_pear_dir}/data/Net_SMPP_Client/* .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log
-%doc docs/%{_pearname}/docs/*
+%doc README install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Net/SMPP/*.php
+%{_examplesdir}/%{name}-%{version}
