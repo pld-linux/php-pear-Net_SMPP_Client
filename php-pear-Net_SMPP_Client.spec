@@ -11,7 +11,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	49b3e65036801a8de0e9e0bccb7667d5
 URL:		http://pear.php.net/package/Net_SMPP_Client/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.5.6
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	php(core) >= 4.1.0
