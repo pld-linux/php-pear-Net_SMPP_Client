@@ -1,6 +1,5 @@
 %define		status		devel
 %define		pearname	Net_SMPP_Client
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - SMPP v3.4 client
 Summary(pl.UTF-8):	%{pearname} - klient protokołu SMPP v3.4
 Name:		php-pear-%{pearname}
